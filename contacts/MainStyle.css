@@ -1,0 +1,118 @@
+* {
+    font-family: Comic Sans MS;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 236, 236);
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5vmin;
+}
+
+
+
+
+/* Circle 1 (Discord), 2 (GitHub) and 3 (Google-gmail) */
+
+.circle2, .circle1, .circle3 {
+    display: flex;
+    border-radius: 24px;
+    background-color: rgb(221, 208, 220);
+    opacity: 1;
+    transition: all 0.5s;
+    height: 48px;
+    width: 48px;
+}
+
+/* Contacts */
+
+h1 {
+    color: rgb(139, 127, 129);
+    position: relative;
+    font-size: 52px;
+    top: 300px;
+    text-align: center;
+}
+
+p {
+    position: relative;
+    color: rgb(221, 164, 164);
+    opacity: 0;
+    font-size: 0;
+}
+
+.contact1 {
+    left:8%;
+    top: -5%;
+}
+
+.contact2 {
+    top: -5%;
+}
+
+.contact3 {
+    top: -5%;
+    left: 8%;
+}
+/* Icons */
+
+.fa-github, .fa-discord, .fa-google {
+    color: rgb(221, 164, 164);
+    opacity: 1;
+    transition: all 0.5s;
+
+}
+
+.fa-discord {
+    font-size: 24px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.fa-github {
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-google {
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* Animations */
+
+.circle2:hover p, .circle1:hover p, .circle3:hover p {
+    font-size: 16px;
+    animation: slide-in 1.2s forwards; 
+}
+
+.circle2:hover .fa-github,  .circle1:hover .fa-discord, .circle3:hover .fa-google {
+    transform: rotateZ(180deg);
+    opacity:  0;
+}
+
+.circle1:hover, .circle2:hover, .circle3:hover {
+    transition: all 0.5s;
+    width: 200px;
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-15%);
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
